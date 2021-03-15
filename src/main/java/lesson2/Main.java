@@ -21,7 +21,11 @@ public class Main {
 
         //Задача 4
         fillDiagonal();
-        System.out.println("Задача 1:");
+
+        //Задача 5
+        System.out.println("min: "+ findMin(5, 3, 2, 11, 4, 5, 2));
+        System.out.println("max: "+ findMax(5, 3, 2, 11, 4, 5, 2));
+
     }
     /**
      * 1.  Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ].
@@ -80,5 +84,21 @@ public class Main {
             }
             System.out.println();
         }
+    }
+
+    public static int findMin(int... arr) {
+        int min = arr[0];
+        for (int i : arr) {
+            if (min > i) min = i;
+        }
+        return min;
+    }
+
+    public static int findMax(int... arr) {
+        int max = arr[0];
+        for (int i : arr) {
+            if (max < i) max = i;
+        }
+        return max;
     }
 }
