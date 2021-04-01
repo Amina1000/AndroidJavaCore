@@ -38,7 +38,9 @@ public class Main {
                 cat.insertTable(databaseConnection);
                 cat.selectTable(databaseConnection);
             }
-            cats[2].updateTable(databaseConnection,"age = 4");
+
+            cats[2].updateTable(databaseConnection,"color = 'red'");
+            cats[2].updateAge(4,databaseConnection);
             cats[2].selectTable(databaseConnection);
 
         } catch (ClassNotFoundException | SQLException e) {

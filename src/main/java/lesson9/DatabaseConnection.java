@@ -22,6 +22,10 @@ public class DatabaseConnection {
     private Connection connection;
     private Statement statement;
 
+    public Connection getConnection() {
+        return connection;
+    }
+
     public void disconnect() {
         try {
             if (statement != null) statement.close();
@@ -74,5 +78,4 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
     }
-
 }
