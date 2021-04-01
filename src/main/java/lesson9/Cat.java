@@ -1,5 +1,6 @@
 package lesson9;
 
+import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -46,5 +47,17 @@ public class Cat {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    public void updateAge(int age, DatabaseConnection databaseConnection){
+        try {
+            CallableStatement cs = databaseConnection.getConnection().prepareCall("{ CALL updateAge(?,?) }");
+            cs.setString(1,name);
+            cs.setInt(2,age);
+            cs.addBatch();
+            cs.executeBatch();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }
