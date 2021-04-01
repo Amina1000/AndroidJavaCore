@@ -21,7 +21,6 @@ public class DatabaseConnection {
 
     private Connection connection;
     private Statement statement;
-    private Savepoint savepoint;
 
     public void disconnect() {
         try {
@@ -68,10 +67,10 @@ public class DatabaseConnection {
 
     public void insertDatabase(String query) throws SQLException {
         try {
-            savepoint = connection.setSavepoint();
+            connection.setAutoCommit(false);
             execute(query);
         } catch (SQLException e) {
-            connection.rollback(savepoint);
+            connection.rollback();
             e.printStackTrace();
         }
     }
