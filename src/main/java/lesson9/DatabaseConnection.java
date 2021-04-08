@@ -42,7 +42,7 @@ public class DatabaseConnection {
 
     public void connect() throws ClassNotFoundException, SQLException {
 
-        Class.forName("org.sqlite.JDBC");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         connection = DriverManager.getConnection(url, user, password);
         statement = connection.createStatement();
     }
