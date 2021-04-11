@@ -9,7 +9,7 @@ import java.util.List;
  * @author Amina
  * 08.04.2021
  */
-public class Box<T> {
+public class Box<T extends Fruit> {
     List<T> boxFruit = new ArrayList<>();
     int count;
     float mass;
@@ -44,8 +44,8 @@ public class Box<T> {
         mass = weight * count;
     }
 
-    public boolean compare(Box <T> box) {
-        return mass == box.getWeight();
+    public boolean compare(Box <? extends Fruit> box) {
+        return Math.abs(mass -box.getWeight())<0.00001;
     }
 
     public void shift(Box<T> box) {

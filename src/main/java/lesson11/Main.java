@@ -18,10 +18,10 @@ public class Main {
         //процедура решает две задачи. Задача 1,2
         changeElements(str,0,3);
         //Задача 3
-        Fruit apple = new Apple(1.0f,"яблоко");
-        Fruit orange = new Orange(1.5f,"апельсин");
+        Apple apple = new Apple(1.5f,"яблоко");
+        Orange orange = new Orange(1.5f,"апельсин");
         Box<Fruit>box1 = fillBox(apple,10, apple.getWeight());
-        Box<Fruit>box2 = fillBox(orange,15, orange.getWeight());
+        Box<Fruit>box2 = fillBox(orange,10, orange.getWeight());
          /*
          Внутри класса Box сделать метод compare(), который позволяет сравнить текущую коробку с той,
          которую подадут в compare() в качестве параметра. true – если их массы равны, false в противоположном случае.
@@ -58,7 +58,7 @@ public class Main {
     Для хранения фруктов внутри коробки можно использовать ArrayList;
     Сделать метод getWeight(), который высчитывает вес коробки, зная вес одного фрукта и их количество: вес яблока – 1.0f, апельсина – 1.5f (единицы измерения не важны);
      */
-    public static<F> Box<F> fillBox(F fruit,int count, float weight){
+    public static<F extends Fruit> Box<F> fillBox(F fruit, int count, float weight){
         Box<F>box = new Box<>(fruit, count);
         System.out.println(box.toString());
         box.setWeight(weight);
