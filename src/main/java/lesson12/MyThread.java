@@ -18,7 +18,7 @@ public class MyThread {
 
         Arrays.fill(arr, 1);
         a = System.currentTimeMillis();
-        calcMassive(arr, 1);
+        calcMassive(arr, 0);
 
         System.out.println(System.currentTimeMillis() - a);
     }
@@ -33,8 +33,8 @@ public class MyThread {
         System.arraycopy(arr, 0, a1, 0, h);
         System.arraycopy(arr, h, a2, 0, h);
 
-        Thread t1 = new Thread(() -> calcMassive(a1,1));
-        Thread t2 = new Thread(() -> calcMassive(a2,2));
+        Thread t1 = new Thread(() -> calcMassive(a1,0));
+        Thread t2 = new Thread(() -> calcMassive(a2,h));
 
         t1.start();
         t2.start();
@@ -52,14 +52,10 @@ public class MyThread {
         System.out.println(System.currentTimeMillis() - a);
 
     }
-    void calcMassive(float[] a, int half){
-        if(half ==1){
+
+    void calcMassive(float[] a, int h) {
         for (int i = 0; i < a.length; i++) {
-            a[i] = (float) (a[i] * Math.sin(0.2f +(float) i / 5) * Math.cos(0.2f +(float) i / 5) * Math.cos(0.4f +(float) i / 2));
-        }}else{
-            for (int i = 0; i < a.length; i++) {
-                a[i] = (float)(a[i] * Math.sin(0.2f +(float) (i+h)/ 5) * Math.cos(0.2f +(float) (i+h)/ 5) * Math.cos(0.4f +(float) (i+h)/ 2));
-            }
+            a[i] = (float) (a[i] * Math.sin(0.2f + (float) (i + h) / 5) * Math.cos(0.2f + (float) (i + h) / 5) * Math.cos(0.4f + (float) (i + h) / 2));
         }
     }
 }
