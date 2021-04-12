@@ -49,6 +49,7 @@ public class Box<T extends Fruit> {
     }
 
     public void shift(Box<T> box) {
+        if (this == box) return;
         boxFruit.clear();
         clearBox();
         boxFruit.addAll(box.boxFruit);
