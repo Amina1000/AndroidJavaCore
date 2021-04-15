@@ -4,7 +4,6 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-
 /**
  * homework lesson13
  *
@@ -19,13 +18,10 @@ public class Car implements Runnable{
     private AtomicBoolean  winner = new AtomicBoolean(false);
     CyclicBarrier cb;
 
-    public int getCarsCount() {
-        return CARS_COUNT;
-    }
-
     public String getName() {
         return name;
     }
+
     public int getSpeed() {
         return speed;
     }

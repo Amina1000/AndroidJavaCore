@@ -1,7 +1,4 @@
 package lesson13;
-
-import java.util.concurrent.CyclicBarrier;
-
 /**
  * homework lesson13
  *

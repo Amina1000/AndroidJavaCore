@@ -9,6 +9,8 @@ import java.util.concurrent.Semaphore;
  * 15.04.2021
  */
 public class Tunnel extends Stage {
+    private int permits = Main.CARS_COUNT / 2;
+
     public Tunnel() {
         this.length = 80;
         this.description = "Тоннель " + length + " метров";
@@ -16,7 +18,7 @@ public class Tunnel extends Stage {
 
     @Override
     public void go(Car c) {
-        Semaphore smp = new Semaphore(c.getCarsCount()/2);
+        Semaphore smp = new Semaphore(permits);
         try {
             try {
                 System.out.println(c.getName() + " готовится к этапу(ждет): " + description);
