@@ -1,7 +1,6 @@
 package lesson13;
 
-import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.*;
 
 /**
  * homework lesson13
@@ -22,7 +21,9 @@ public class Main {
             cars[i] = new Car(race, 20 + (int) (Math.random() * 10),cb);
         }
         for (Car car : cars) {
-            new Thread(car).start();
+            ExecutorService executorService = Executors.newFixedThreadPool(10);
+            executorService.execute(car);
+            executorService.shutdown();
         }
         try {
             cb.await();
