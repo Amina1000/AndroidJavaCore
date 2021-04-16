@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class Car implements Runnable{
     private static int CARS_COUNT;
     private Race race;
-    private int speed;
+    private long speed;
     private String name;
     private AtomicBoolean  winner = new AtomicBoolean(false);
     CyclicBarrier cb;
@@ -22,7 +22,7 @@ public class Car implements Runnable{
         return name;
     }
 
-    public int getSpeed() {
+    public long getSpeed() {
         return speed;
     }
     public Car(Race race, int speed, CyclicBarrier cb) {
@@ -52,11 +52,9 @@ public class Car implements Runnable{
             winner.set(true);
             System.out.println(name + " победитель!!!");
             cb.await();
-        } catch (InterruptedException e) {
+        } catch (InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();
-        } catch (BrokenBarrierException e) {
-            e.printStackTrace();
-        }finally {
+        } finally {
             race.lock.unlock();
         }
     }
