@@ -21,7 +21,7 @@ public class Main {
             cars[i] = new Car(race, 20 + (int) (Math.random() * 10),cb);
         }
         for (Car car : cars) {
-            ExecutorService executorService = Executors.newFixedThreadPool(10);
+            ExecutorService executorService = Executors.newFixedThreadPool(CARS_COUNT+1);
             executorService.execute(car);
             executorService.shutdown();
         }

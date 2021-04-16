@@ -1,8 +1,10 @@
 package lesson13;
 
+import java.util.Date;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicBoolean;
+
 
 /**
  * homework lesson13
@@ -15,7 +17,7 @@ public class Car implements Runnable{
     private Race race;
     private long speed;
     private String name;
-    private AtomicBoolean  winner = new AtomicBoolean(false);
+    private static AtomicBoolean  winner = new AtomicBoolean(false);
     CyclicBarrier cb;
 
     public String getName() {
@@ -37,7 +39,7 @@ public class Car implements Runnable{
     public void run() {
         try {
             System.out.println(this.name + " готовится");
-            Thread.sleep(500 + (int)(Math.random() * 800));
+            Thread.sleep(500 + (int) (Math.random() * 800));
             System.out.println(this.name + " готов");
             cb.await();
         } catch (Exception e) {
@@ -49,13 +51,16 @@ public class Car implements Runnable{
 
         try {
             race.lock.lock();
-            winner.set(true);
-            System.out.println(name + " победитель!!!");
+            if (!winner.getAndSet(true)) {
+                System.out.println(name + " победитель!!! Расчетное время прибытия: "+  new Date(System.currentTimeMillis()));
+            } else System.out.println(name + " финишировал. Расчетное время прибытия:"+ new Date(System.currentTimeMillis()));
+        } finally {
+            race.lock.unlock();
+        }
+        try {
             cb.await();
         } catch (InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();
-        } finally {
-            race.lock.unlock();
         }
     }
 }
