@@ -1,0 +1,78 @@
+2021-04-21 16:44:06,818 TRACE l.Main [main] info
+2021-04-21 16:44:06,834 TRACE l.Main [main] error
+2021-04-21 16:47:03,069 TRACE l.Main [main] info
+2021-04-21 16:47:03,069 TRACE l.Main [main] error
+2021-04-21 16:47:51,667 TRACE l.Main [main] info
+2021-04-21 16:47:51,667 ERROR l.Main [main] error
+TRACE 16:48:16.993 [main] lesson14.Main:15 (Main.java:15) - info
+ERROR 16:48:17.009 [main] lesson14.Main:16 (Main.java:16) - error
+ERROR 16:50:32.776 [main] lesson14.Main:16 (Main.java:16) - error
+TRACE 16:51:27.215 [main] lesson14.Main:15 (Main.java:15) - info
+ERROR 16:51:27.221 [main] lesson14.Main:16 (Main.java:16) - error
+ERROR 16:52:03.869 [main] lesson14.Main:16 (Main.java:16) - error
+ERROR 16:52:03.869 [main] lesson14.Main:16 (Main.java:16) - error
+TRACE 16:52:41.099 [main] lesson14.Main:15 (Main.java:15) - trace
+TRACE 16:52:41.099 [main] lesson14.Main:15 (Main.java:15) - trace
+ERROR 16:52:41.105 [main] lesson14.Main:16 (Main.java:16) - error
+ERROR 16:52:41.105 [main] lesson14.Main:16 (Main.java:16) - error
+ERROR 16:55:07.521 [main] lesson14.Main:16 (Main.java:16) - error
+TRACE 17:10:21.859 [main] lesson14.Main:16 (Main.java:16) - trace
+TRACE 17:10:21.859 [main] lesson14.Main:16 (Main.java:16) - trace
+ERROR 17:10:21.865 [main] lesson14.Main:17 (Main.java:17) - error Hey gays
+ERROR 17:10:21.865 [main] lesson14.Main:17 (Main.java:17) - error Hey gays
+TRACE 17:15:13.178 [main] lesson14.Main:16 (Main.java:16) - trace
+TRACE 17:15:13.178 [main] lesson14.Main:16 (Main.java:16) - trace
+ERROR 17:15:13.193 [main] lesson14.Main:17 (Main.java:17) - error Hey gays
+ERROR 17:15:13.193 [main] lesson14.Main:17 (Main.java:17) - error Hey gays
+ERROR 17:15:13.193 [main] lesson14.Main:23 (Main.java:23) - java.lang.Exception: Exception
+ERROR 17:15:13.193 [main] lesson14.Main:23 (Main.java:23) - java.lang.Exception: Exception
+ERROR 17:15:13.193 [main] lesson14.Main:24 (Main.java:24) - Throwing
+java.lang.Exception: Exception
+	at lesson14.Main.main(Main.java:20) [classes/:?]
+ERROR 17:15:13.193 [main] lesson14.Main:24 (Main.java:24) - Throwing
+java.lang.Exception: Exception
+	at lesson14.Main.main(Main.java:20) [classes/:?]
+ERROR 23:46:49.516 [main] lesson14.Main:21 (Main.java:21) - Ошибка создания массива!
+ERROR 23:46:49.516 [main] lesson14.Main:21 (Main.java:21) - Ошибка создания массива!
+INFO  23:50:54.363 [main] lesson14.Main:19 (Main.java:19) - [5, 6, 7]
+INFO  23:50:54.363 [main] lesson14.Main:19 (Main.java:19) - [5, 6, 7]
+ERROR 23:51:11.375 [main] lesson14.Main:21 (Main.java:21) - Ошибка создания массива!
+ERROR 23:51:11.375 [main] lesson14.Main:21 (Main.java:21) - Ошибка создания массива!
+INFO  23:53:27.421 [main] lesson14.Main:19 (Main.java:19) - [5, 6, 7]
+INFO  23:53:27.421 [main] lesson14.Main:19 (Main.java:19) - [5, 6, 7]
+ERROR 23:53:38.984 [main] lesson14.Main:21 (Main.java:21) - Throwing
+java.lang.RuntimeException: Массив не может быть менее 4х элементов
+	at lesson14.ArrayMethods.<init>(ArrayMethods.java:19) ~[classes/:?]
+	at lesson14.Main.main(Main.java:18) [classes/:?]
+ERROR 23:53:38.984 [main] lesson14.Main:21 (Main.java:21) - Throwing
+java.lang.RuntimeException: Массив не может быть менее 4х элементов
+	at lesson14.ArrayMethods.<init>(ArrayMethods.java:19) ~[classes/:?]
+	at lesson14.Main.main(Main.java:18) [classes/:?]
+INFO  00:04:22.739 [main] lesson14.Main:19 (Main.java:19) - [5, 6, 7]
+INFO  00:04:22.739 [main] lesson14.Main:19 (Main.java:19) - [5, 6, 7]
+INFO  00:04:22.747 [main] lesson14.Main:20 (Main.java:20) - Проверка на наличие 1 и 4:true
+INFO  00:04:22.747 [main] lesson14.Main:20 (Main.java:20) - Проверка на наличие 1 и 4:true
+INFO  00:05:30.690 [main] lesson14.Main:19 (Main.java:19) - [7]
+INFO  00:05:30.690 [main] lesson14.Main:19 (Main.java:19) - [7]
+INFO  00:05:30.700 [main] lesson14.Main:20 (Main.java:20) - Проверка на наличие 1 и 4:true
+INFO  00:05:30.700 [main] lesson14.Main:20 (Main.java:20) - Проверка на наличие 1 и 4:true
+INFO  00:46:26.576 [main] lesson14.Main:19 (Main.java:19) - [1, 7]
+INFO  00:46:26.576 [main] lesson14.Main:19 (Main.java:19) - [1, 7]
+INFO  00:46:26.582 [main] lesson14.Main:20 (Main.java:20) - Проверка на наличие 1 и 4:true
+INFO  00:46:26.582 [main] lesson14.Main:20 (Main.java:20) - Проверка на наличие 1 и 4:true
+INFO  01:23:45.631 [main] lesson14.Main:19 (Main.java:19) - [1, 7]
+INFO  01:23:45.631 [main] lesson14.Main:19 (Main.java:19) - [1, 7]
+INFO  01:23:45.639 [main] lesson14.Main:21 (Main.java:21) - Проверка на наличие 1 и 4:false
+INFO  01:23:45.639 [main] lesson14.Main:21 (Main.java:21) - Проверка на наличие 1 и 4:false
+INFO  01:24:34.126 [main] lesson14.Main:19 (Main.java:19) - [1, 7]
+INFO  01:24:34.126 [main] lesson14.Main:19 (Main.java:19) - [1, 7]
+INFO  01:24:34.132 [main] lesson14.Main:22 (Main.java:22) - Проверка на наличие 1 и 4:false
+INFO  01:24:34.132 [main] lesson14.Main:22 (Main.java:22) - Проверка на наличие 1 и 4:false
+INFO  01:25:40.243 [main] lesson14.Main:19 (Main.java:19) - [1, 7]
+INFO  01:25:40.243 [main] lesson14.Main:19 (Main.java:19) - [1, 7]
+INFO  01:26:15.464 [main] lesson14.Main:22 (Main.java:22) - Проверка на наличие 1 и 4:false
+INFO  01:26:15.464 [main] lesson14.Main:22 (Main.java:22) - Проверка на наличие 1 и 4:false
+INFO  01:26:20.558 [main] lesson14.Main:19 (Main.java:19) - [1, 7]
+INFO  01:26:20.558 [main] lesson14.Main:19 (Main.java:19) - [1, 7]
+INFO  01:26:20.564 [main] lesson14.Main:22 (Main.java:22) - Проверка на наличие 1 и 4:true
+INFO  01:26:20.564 [main] lesson14.Main:22 (Main.java:22) - Проверка на наличие 1 и 4:true
